@@ -7,7 +7,3 @@
 electron开发的桌面应用，窗口置顶透明，每隔45分提示“休息一下”
 #
 当然自己可以继续开发，比如：桌面歌词，电脑全屏弹幕......
-### 效果图
-![result](./result.png) 
-
-![效果图](https://github.com/go4it-x/protect-your-eyes/blob/main/result.gif) 
