@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>保护你的眼睛</title>
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="eyes hide">休息一下吧！</div>
+<script>
+    const el = document.querySelector('.eyes'),
+        c = el.classList,
+        interval = 45 * 60 * 1000;//多久提醒一下
+
+    setTimeout(start, interval);
+
+    function start() {
+        c.remove("hide");
+        c.add('animate__animated', 'animate__heartBeat', 'animate__repeat-3');
+        el.addEventListener('animationend', () => {
+            c.remove('animate__animated', 'animate__heartBeat', 'animate__repeat-3');
+            c.add("hide");
+            setTimeout(start, interval)
+        });
+    }
+</script>
+</body>
+</html>
